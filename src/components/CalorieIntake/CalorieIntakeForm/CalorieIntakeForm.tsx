@@ -1,10 +1,18 @@
+'use client'
 import { Button } from '@components/common/atoms/Button'
 import { CalorieIntakeContainer } from '../CalorieIntakeContainer'
 import { CalorieIntakeMealSubForm } from '../CalorieIntakeMealForm'
 import { Meal } from '../CalorieIntakeMealForm/CalorieIntakeMealSubForm.types'
 import { CalorieIntakeSummary } from '../CalorieIntakeSummary'
-
+import { useCalorieIntakeStore } from '../store'
+import { useEffect } from 'react'
+import Link from 'next/link'
 export const CalorieIntakeForm = () => {
+  // Rehydrate zustand store
+  useEffect(() => {
+    useCalorieIntakeStore.persist.rehydrate()
+  }, [])
+
   return (
     <CalorieIntakeContainer>
       <div className="flex flex-col gap-8">
@@ -27,7 +35,9 @@ export const CalorieIntakeForm = () => {
         </div>
 
         <div className="flex justify-center">
-          <Button>Send my information</Button>
+          <Link href="/diary">
+            <Button>Send my information</Button>
+          </Link>
         </div>
       </div>
     </CalorieIntakeContainer>

@@ -7,26 +7,28 @@ import AddIcon from '@public/icons/add-icon.svg'
 export const ProductDetails = ({ product }: ProductDetailsProps) => {
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex flex-col w-full gap-8 items-center">
-        <div className="flex items-center gap-8">
-          <WeightInfo weight={product.weight} />
-          <Circle className="border-primary-300">
-            <span>Carbs</span>
-            <span>{product.carbs}g</span>
-          </Circle>
-        </div>
+      <div className="flex w-full gap-8 justify-center">
+        <div className="flex gap-8">
+          <div className="flex flex-col items-center gap-4 justify-around">
+            <WeightInfo weight={product.weight} />
+            <CalorieBar
+              value={product.calories}
+              max={100}
+              progressClassName="h-3 w-40"
+              spanClassName="text-sm"
+            />
+          </div>
 
-        <div className="flex items-center gap-8">
-          <CalorieBar
-            value={product.calories}
-            max={100}
-            progressClassName="h-3 w-40"
-            spanClassName="text-sm"
-          />
-          <Circle className=" border-primary-300">
-            <span>Fat</span>
-            <span>{product.fat}g</span>
-          </Circle>
+          <div className="flex flex-col items-center gap-4 justify-around">
+            <Circle className="border-primary-300">
+              <span>Carbs</span>
+              <span>{product.carbs}g</span>
+            </Circle>
+            <Circle className=" border-primary-300">
+              <span>Fat</span>
+              <span>{product.fat}g</span>
+            </Circle>
+          </div>
         </div>
       </div>
       <div className="border-2 border-gray text-violet-blue p-4 flex flex-col gap-4">

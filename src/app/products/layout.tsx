@@ -7,9 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <ApolloWrapper>
-      <div className="flex justify-center">
-        <div className="container py-10">{children}</div>
-      </div>
+      <div className="flex justify-center w-full">{children}</div>
     </ApolloWrapper>
   )
 }

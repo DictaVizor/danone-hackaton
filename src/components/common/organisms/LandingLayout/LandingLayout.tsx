@@ -8,7 +8,7 @@ export const LandingLayout = ({ children }: LandingLayoutProps) => {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <SignupNavbar />
       <Navbar />
-      <div className="flex flex-grow flex-col">{children}</div>
+      <div className="flex flex-grow flex-col h-full">{children}</div>
       <Footer />
     </div>
   )
