@@ -5,6 +5,7 @@ import Image from 'next/image'
 import MenuDotsIcon from '@public/icons/menu-dots.svg'
 import SearchIcon from '@public/icons/search-icon.svg'
 import { Button } from '@components/common/atoms/Button'
+import { NavbarItem } from '@components/common/atoms/NavbarItem'
 
 export const Navbar = (props: NavbarProps) => {
   return (
@@ -16,13 +17,9 @@ export const Navbar = (props: NavbarProps) => {
         width={156}
       />
       <div className="flex-grow" />
-      <div className="flex gap-8 font-bold text-dark-blue">
+      <div className="flex gap-8 font-bold ">
         {urls.map((url) => {
-          return (
-            <Link key={url.name} href={url.url}>
-              {url.name}
-            </Link>
-          )
+          return <NavbarItem key={url.name} url={url.url} label={url.name} />
         })}
       </div>
       <div className="flex-grow" />
