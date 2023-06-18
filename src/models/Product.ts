@@ -23,4 +23,5 @@ export type Product = {
   image: {
     url: string
   }
+  id: string
 }
