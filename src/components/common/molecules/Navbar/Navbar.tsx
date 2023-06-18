@@ -3,7 +3,7 @@ import { urls } from './Navbar.constants'
 import { NavbarProps } from './Navbar.types'
 import Image from 'next/image'
 import MenuDotsIcon from '@public/icons/menu-dots.svg'
-import SearchIcon from '@public/icons/Type=fi-rr-search.svg'
+import SearchIcon from '@public/icons/search-icon.svg'
 import { Button } from '@components/common/atoms/Button'
 
 export const Navbar = (props: NavbarProps) => {
