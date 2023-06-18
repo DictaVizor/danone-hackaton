@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield !important;
+    }
+ }
+
+ @layer utilities {
+   .progress-product::-moz-progress-bar {
+    background-color: theme(colors.light-blue2);
+  }
+  .progress-product:indeterminate {
+    --progress-color: theme(colors.light-blue2);
+  }
+  .progress-product::-webkit-progress-value {
+    background-color: theme(colors.light-blue2);
+  }
+  .progress-product::-webkit-progress-bar {
+    background-color: theme(colors.transparent)
+  }
+  
+ }
