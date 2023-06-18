@@ -59,7 +59,7 @@ export const useCalorieIntakeStore = create<
             state.mealCalories[meal].limit = limit
           }),
       })),
-      { name: 'calorie-intake-storage' },
+      { name: 'calorie-intake-storage', skipHydration: true },
     ),
   ),
 )
