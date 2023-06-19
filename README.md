@@ -1,7 +1,7 @@
 
 # Danone Hackaton
 
-Project was built within a 2 8 hour session during Danone Hackaton 2023.
+Project was built within a 2 sessions of 8 hours each during Danone Hackaton 2023.
 
 ## <div align="center"><a href="https://danone-hackaton-8ypklcv2g-dictavizor.vercel.app">View site</a></div>
 
